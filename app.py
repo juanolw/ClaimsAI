@@ -133,7 +133,7 @@ with col2:
        selected_claim_type = st.selectbox("Filter by Claim Type", unique_claim_types)
 
    # Apply filters
-   filtered_df = df
+filtered_df = df
    if selected_party != "All":
        filtered_df = filtered_df[filtered_df["Party"] == selected_party]
    if selected_claim_type != "All":
