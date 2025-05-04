@@ -134,9 +134,9 @@ with col2:
 
    # Apply filters
 filtered_df = df
-   if selected_party != "All":
+if selected_party != "All":
        filtered_df = filtered_df[filtered_df["Party"] == selected_party]
-   if selected_claim_type != "All":
+if selected_claim_type != "All":
        filtered_df = filtered_df[filtered_df["Claim Type"] == selected_claim_type]
 
    # Display the filtered table
