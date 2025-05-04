@@ -120,7 +120,7 @@ df = pd.DataFrame(positions_data)
 st.title("Arbitration Position Summarizer")
 
    # Create two columns for filters
-   col1, col2 = st.columns(2)
+col1, col2 = st.columns(2)
 
    # Filter by Party
    with col1:
