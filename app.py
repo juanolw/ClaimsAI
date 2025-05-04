@@ -113,35 +113,35 @@ positions_data = [
        },
    ]
 
-   # Convert data to DataFrame
+# Convert data to DataFrame
 df = pd.DataFrame(positions_data)
 
-   # Streamlit app
+# Streamlit app
 st.title("Arbitration Position Summarizer")
 
-   # Create two columns for filters
+# Create two columns for filters
 col1, col2 = st.columns(2)
 
-   # Filter by Party
+# Filter by Party
 with col1:
        unique_parties = ["All"] + sorted(df["Party"].unique().tolist())
        selected_party = st.selectbox("Filter by Party", unique_parties)
 
-   # Filter by Claim Type
+# Filter by Claim Type
 with col2:
        unique_claim_types = ["All"] + sorted(df["Claim Type"].unique().tolist())
        selected_claim_type = st.selectbox("Filter by Claim Type", unique_claim_types)
 
-   # Apply filters
+# Apply filters
 filtered_df = df
 if selected_party != "All":
        filtered_df = filtered_df[filtered_df["Party"] == selected_party]
 if selected_claim_type != "All":
        filtered_df = filtered_df[filtered_df["Claim Type"] == selected_claim_type]
 
-   # Display the filtered table
-   st.subheader("Positions Table")
-   st.dataframe(
+# Display the filtered table
+st.subheader("Positions Table")
+st.dataframe(
        filtered_df,
        use_container_width=True,
        hide_index=True,
@@ -153,8 +153,8 @@ if selected_claim_type != "All":
        },
    )
 
-   # Instructions
-   st.markdown("""
+# Instructions
+st.markdown("""
    ### How to Use
    - Use the dropdown menus to filter by **Party** (Claimant or Respondent) or **Claim Type** (e.g., Financial Claim, Defense).
    - Select "All" to view all entries for a given filter.
