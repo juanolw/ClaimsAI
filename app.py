@@ -128,7 +128,7 @@ with col1:
        selected_party = st.selectbox("Filter by Party", unique_parties)
 
    # Filter by Claim Type
-   with col2:
+with col2:
        unique_claim_types = ["All"] + sorted(df["Claim Type"].unique().tolist())
        selected_claim_type = st.selectbox("Filter by Claim Type", unique_claim_types)
 
