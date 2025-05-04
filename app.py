@@ -123,7 +123,7 @@ st.title("Arbitration Position Summarizer")
 col1, col2 = st.columns(2)
 
    # Filter by Party
-   with col1:
+with col1:
        unique_parties = ["All"] + sorted(df["Party"].unique().tolist())
        selected_party = st.selectbox("Filter by Party", unique_parties)
 
