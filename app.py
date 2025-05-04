@@ -117,7 +117,7 @@ positions_data = [
 df = pd.DataFrame(positions_data)
 
    # Streamlit app
-   st.title("Arbitration Position Summarizer")
+st.title("Arbitration Position Summarizer")
 
    # Create two columns for filters
    col1, col2 = st.columns(2)
