@@ -114,7 +114,7 @@ positions_data = [
    ]
 
 # Convert data to DataFrame
-   df = pd.DataFrame(positions_data)
+df = pd.DataFrame(positions_data)
 
 # Streamlit app
 st.title("Arbitration Position Summarizer")
